@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Personal Trainer App 2020
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple personal trainer app done with React, as a final assignment for front end development course at Haaga-Helia Applied University.
 
-## Available Scripts
+## Components
 
-In the project directory, you can run:
+- [App](/src/App.js) -- Root component that contains Drawer and Router components
+- [Drawer](/src/components/Drawer.js) -- Component for displaying a Material-UI Clipped Drawer
+- [Customers](/src/components/Customers.js) -- Main component that shows 10 customers as a default. Enables 
+sorting, filtering, adding, editing and deleting a customer
+- [Addcustomer](/src/components/Addcustomer.js) -- Dialog for adding a new customer
+- [Editcustomer](/src/components/Editcustomer.js) -- Dialog for editing a customer
+- [Trainings](/src/components/Trainings.js) -- Main component that shows 10 trainings as a default. Enables sorting, filtering, adding and deleting a training
+- [Addtraining](/src/components/Addtraining.js) -- Dialog for adding a new training
+- [Trainingcalendar](/src/components/Trainingcalendar.js) -- Component that uses React-big-calendar to show all the trainings in the calendar
+- [Home](/src/components/Home.js) -- Just a simple home screen for further development
 
-### `yarn start`
+## Existing components & libraries used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [ReactRouter](https://reactrouter.com/) for navigation
+- [Material-UI Clipped Drawer](https://material-ui.com/components/drawers/#clipped-under-the-app-bar) for menu
+- [Material-UI AppBar](https://material-ui.com/components/app-bar/) for showing the App's name on top of the screen
+- [Material-UI Icons](https://material-ui.com/components/material-icons/) for drawer elements
+- [React-table (version 6)](https://github.com/tannerlinsley/react-table/tree/v6) for showing, searching and filtering customer and training data in a table on Customers and Trainings components
+- [Moment.js](https://momentjs.com/) for modifying dates
+- [React-big-calendar](https://www.npmjs.com/package/react-big-calendar) for displaying events in a calendar
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## How to try this out
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- clone this repository
+- install the following dependencies:
+- npm install @material-ui/core
+- npm install @material-ui/icons
+- npm install react-router-dom
+- npm install react-table
+- npm install moment
+- npm install react-big-calendar
 
-### `yarn build`
+## Improvement ideas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- before saving the training, check that customer exists in the database with the given id
+- add customers to a drop-down list for selection when creating a new training
+- show customer name instead of id
+- show customer's own training on one page by clicking the customer on the table
